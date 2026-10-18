@@ -1,0 +1,100 @@
+# ============================================================
+# SE_MANIFEST.toml (Repository Declaration)
+# ============================================================
+
+schema = "se-manifest-schema"
+schema_version = "0.5.1"
+schema_url = "https://raw.githubusercontent.com/structural-explainability/se-manifest-schema/main/manifest-schema.toml"
+
+# === Framework Context ===
+
+[meta]
+framework = "Structural Explainability"
+framework_url = "https://github.com/structural-explainability"
+purpose = "Declares this repository's role in the Structural Explainability ecosystem."
+
+# === Repository Identity ===
+
+[repository]
+organization = "structural-explainability"
+name = "se-theory-individuation"
+class = "theory"
+kind = "foundation"
+status = "active"
+since = "2026"
+summary = "Lean 4 formalization of foundational individuation theory for identity survival, invariance, equivalence, and breakage under transformation."
+
+# === Layer Position ===
+
+[layer]
+space = "formal-theory"
+role = "foundational-individuation-theory"
+
+# === Dependency Declarations ===
+
+[depends]
+required = []
+optional = []
+
+# === Provided Artifacts ===
+
+[provides]
+# Logical artifacts exposed by this repository.
+# These are stable identifiers, not file paths.
+artifacts = [
+  "lean-library",
+  "individuation-vocabulary",
+  "individuation-relation-definitions",
+  "individuation-invariant-definitions",
+  "individuation-equivalence-definitions",
+  "individuation-breakage-definitions",
+]
+
+# === Scope ===
+
+[scope]
+includes = [
+  "foundational individuation vocabulary",
+  "identity survival relations",
+  "identity breakage relations",
+  "individuation invariants",
+  "individuation equivalence",
+  "Lean formalization of individuation theory",
+]
+
+excludes = [
+  "foundational transformation operators",
+  "transformation family definitions",
+  "transformation kind definitions",
+  "neutral substrate primitive definitions",
+  "mapping semantics",
+  "operational validation logic",
+  "domain-specific interpretation",
+  "runtime systems",
+]
+
+# === Validation ===
+
+[validation]
+# Validates repository declaration, manifest schema conformance,
+# reference artifacts, generated artifacts, and Lean public surface coverage.
+export_check_entrypoint = "uvx se-theory-reference-kit@latest export --check"
+reference_entrypoint = "uvx se-theory-reference-kit@latest validate"
+strict_entrypoint = "uvx se-theory-reference-kit@latest validate --strict"
+
+# === Behavior / governance ===
+
+[naming]
+pattern = "se-theory-*"
+
+[governance]
+authority = "structural-explainability"
+
+# === External references ===
+
+[citation]
+cff = "CITATION.cff"
+preferred = "CITATION.cff"
+
+[traceability]
+identifier_map = "reference/theory-reference.toml"

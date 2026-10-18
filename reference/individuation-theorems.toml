@@ -1,0 +1,594 @@
+# ============================================================
+# Individuation Theorems
+# se-theory-individuation
+# ============================================================
+# Public semantic theorems for the Individuation theory.
+#
+# Finite witnesses in SETest are intentionally not registered here.
+# One-line accessor lemmas are not registered here.
+
+schema = "se-theorem-registry-1"
+kind = "theorem"
+repo = "se-theory-individuation"
+surface_module = "SE.Individuation"
+namespace = "SE.Individuation"
+
+[theorem.CoMemberRefl]
+order = 1
+id = "CoMemberRefl"
+cite_id = "IND.THM.CO_MEMBER_REFL"
+name = "Co-member reflexive"
+lean_symbol = "SE.Individuation.Structural.Setting.CoMember.refl"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Setting"
+description = "Co-membership is reflexive on eligible atoms."
+
+[theorem.CoMemberSymm]
+order = 2
+id = "CoMemberSymm"
+cite_id = "IND.THM.CO_MEMBER_SYMM"
+name = "Co-member symmetric"
+lean_symbol = "SE.Individuation.Structural.Setting.CoMember.symm"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Setting"
+description = "Co-membership is symmetric."
+
+[theorem.CoMemberTrans]
+order = 3
+id = "CoMemberTrans"
+cite_id = "IND.THM.CO_MEMBER_TRANS"
+name = "Co-member transitive"
+lean_symbol = "SE.Individuation.Structural.Setting.CoMember.trans"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Setting"
+description = "Co-membership is transitive."
+
+[theorem.WholeConditionsSubsetEligible]
+order = 4
+id = "WholeConditionsSubsetEligible"
+cite_id = "IND.THM.WHOLE_CONDITIONS_SUBSET_ELIGIBLE"
+name = "Whole conditions subset of eligible"
+lean_symbol = "SE.Individuation.Structural.Setting.WholeConditions.subset_eligible"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Whole"
+description = "Every set meeting the whole conditions lies inside the eligible domain."
+
+[theorem.WholeConditionsIffIsClass]
+order = 5
+id = "WholeConditionsIffIsClass"
+cite_id = "IND.THM.WHOLE_CONDITIONS_IFF_IS_CLASS"
+name = "Whole conditions iff class"
+lean_symbol = "SE.Individuation.Structural.Setting.wholeConditions_iff_isClass"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Whole"
+description = "The whole conditions characterize exactly one eligible E-class. The result uses only the equivalence-class structure of E, not the connectivity construction."
+
+[theorem.SucceedsIffIsClass]
+order = 6
+id = "SucceedsIffIsClass"
+cite_id = "IND.THM.SUCCEEDS_IFF_IS_CLASS"
+name = "Succeeds iff class"
+lean_symbol = "SE.Individuation.Structural.Setting.succeeds_iff_isClass"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Whole"
+description = "A presentation succeeds exactly when it is admissible and its support is one eligible E-class."
+
+[theorem.WholeConditionsEqOrDisjoint]
+order = 7
+id = "WholeConditionsEqOrDisjoint"
+cite_id = "IND.THM.WHOLE_CONDITIONS_EQ_OR_DISJOINT"
+name = "Whole conditions equal or disjoint"
+lean_symbol = "SE.Individuation.Structural.Setting.WholeConditions.eq_or_disjoint"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Whole"
+description = "Two sets meeting the whole conditions are equal or share no atom. This is the exclusivity consequence of the construction."
+
+[theorem.WholeConditionsNotEqAndDisjoint]
+order = 8
+id = "WholeConditionsNotEqAndDisjoint"
+cite_id = "IND.THM.WHOLE_CONDITIONS_NOT_EQ_AND_DISJOINT"
+name = "Whole conditions not equal and disjoint"
+lean_symbol = "SE.Individuation.Structural.Setting.WholeConditions.not_eq_and_disjoint"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Whole"
+description = "A set meeting the whole conditions is not both equal to and disjoint from another set. Nonemptiness excludes the overlap of the two cases."
+
+[theorem.SameUnitReflIff]
+order = 9
+id = "SameUnitReflIff"
+cite_id = "IND.THM.SAME_UNIT_REFL_IFF"
+name = "Same unit reflexive iff"
+lean_symbol = "SE.Individuation.Structural.Setting.sameUnit_refl_iff"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.SameUnit"
+description = "Same unit at a presentation with itself holds exactly when the presentation succeeds."
+
+[theorem.SameUnitEquivalence]
+order = 10
+id = "SameUnitEquivalence"
+cite_id = "IND.THM.SAME_UNIT_EQUIVALENCE"
+name = "Same unit equivalence"
+lean_symbol = "SE.Individuation.Structural.Setting.sameUnit_equivalence"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.SameUnit"
+description = "Same unit is an equivalence relation on the subtype of successful presentations."
+
+[theorem.NotSameUnitReflOfNotSucceeds]
+order = 11
+id = "NotSameUnitReflOfNotSucceeds"
+cite_id = "IND.THM.NOT_SAME_UNIT_REFL_OF_NOT_SUCCEEDS"
+name = "Not same unit reflexive of not succeeds"
+lean_symbol = "SE.Individuation.Structural.Setting.not_sameUnit_refl_of_not_succeeds"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.SameUnit"
+description = "The success-guarded same-unit relation is not reflexive at a presentation that fails."
+
+[theorem.SameUnitIffOverlap]
+order = 12
+id = "SameUnitIffOverlap"
+cite_id = "IND.THM.SAME_UNIT_IFF_OVERLAP"
+name = "Same unit iff overlap"
+lean_symbol = "SE.Individuation.Structural.Setting.sameUnit_iff_overlap"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.SameUnit"
+description = "On successful presentations, same unit is exactly overlap of supports. The success hypotheses are essential."
+
+[theorem.SameUnitOrDistinctUnits]
+order = 13
+id = "SameUnitOrDistinctUnits"
+cite_id = "IND.THM.SAME_UNIT_OR_DISTINCT_UNITS"
+name = "Same unit or distinct units"
+lean_symbol = "SE.Individuation.Structural.Setting.sameUnit_or_distinctUnits"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.SameUnit"
+description = "Same-or-distinct dichotomy on successful presentations: at least one holds. It depends on exclusivity."
+
+[theorem.NotSameUnitAndDistinctUnits]
+order = 14
+id = "NotSameUnitAndDistinctUnits"
+cite_id = "IND.THM.NOT_SAME_UNIT_AND_DISTINCT_UNITS"
+name = "Not same unit and distinct units"
+lean_symbol = "SE.Individuation.Structural.Setting.not_sameUnit_and_distinctUnits"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.SameUnit"
+description = "Same-or-distinct dichotomy on successful presentations: not both. It uses nonemptiness of successful supports."
+
+[theorem.DistinctUnitsIffNotSameUnit]
+order = 15
+id = "DistinctUnitsIffNotSameUnit"
+cite_id = "IND.THM.DISTINCT_UNITS_IFF_NOT_SAME_UNIT"
+name = "Distinct units iff not same unit"
+lean_symbol = "SE.Individuation.Structural.Setting.distinctUnits_iff_not_sameUnit"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.SameUnit"
+description = "On successful presentations, distinct units is exactly failure of same unit. This does not justify treating failure to establish sameness from evidence as established distinctness."
+
+[theorem.SucceedsIffOfSupportEq]
+order = 16
+id = "SucceedsIffOfSupportEq"
+cite_id = "IND.THM.SUCCEEDS_IFF_OF_SUPPORT_EQ"
+name = "Succeeds iff of support equality"
+lean_symbol = "SE.Individuation.Structural.Setting.succeeds_iff_of_support_eq"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.SameUnit"
+description = "Lossless re-presentation: admissible presentations with equal supports have the same success status."
+
+[theorem.SameUnitOfSupportEq]
+order = 17
+id = "SameUnitOfSupportEq"
+cite_id = "IND.THM.SAME_UNIT_OF_SUPPORT_EQ"
+name = "Same unit of support equality"
+lean_symbol = "SE.Individuation.Structural.Setting.sameUnit_of_support_eq"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.SameUnit"
+description = "Lossless re-presentation: when one presentation succeeds, an admissible presentation with equal support identifies the same unit, whatever its format, labels, or annotation."
+
+[theorem.BondClosureEquivalence]
+order = 18
+id = "BondClosureEquivalence"
+cite_id = "IND.THM.BOND_CLOSURE_EQUIVALENCE"
+name = "Bond closure equivalence"
+lean_symbol = "SE.Individuation.Structural.BondClosure.equivalence"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Connectivity"
+description = "The relation generated by a bond relation is an equivalence relation."
+
+[theorem.BondClosureLeOfEquivalence]
+order = 19
+id = "BondClosureLeOfEquivalence"
+cite_id = "IND.THM.BOND_CLOSURE_LE_OF_EQUIVALENCE"
+name = "Bond closure least equivalence"
+lean_symbol = "SE.Individuation.Structural.BondClosure.le_of_equivalence"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Connectivity"
+description = "The relation generated by a bond relation is the least equivalence relation containing it."
+
+[theorem.BondClosureMap]
+order = 20
+id = "BondClosureMap"
+cite_id = "IND.THM.BOND_CLOSURE_MAP"
+name = "Bond closure map"
+lean_symbol = "SE.Individuation.Structural.BondClosure.map"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Connectivity"
+description = "A map preserving generators preserves the generated relation."
+
+[theorem.BondClosureEqOfIsolated]
+order = 21
+id = "BondClosureEqOfIsolated"
+cite_id = "IND.THM.BOND_CLOSURE_EQ_OF_ISOLATED"
+name = "Bond closure isolated element"
+lean_symbol = "SE.Individuation.Structural.BondClosure.eq_of_isolated"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Connectivity"
+description = "An element with no bond in either direction is connected only to itself."
+
+[theorem.OfBondsBondGenerated]
+order = 22
+id = "OfBondsBondGenerated"
+cite_id = "IND.THM.OF_BONDS_BOND_GENERATED"
+name = "Of bonds is bond generated"
+lean_symbol = "SE.Individuation.Structural.Setting.ofBonds_bondGenerated"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Connectivity"
+description = "The connectivity instance is bond generated by its bond relation."
+
+[theorem.BondGeneratedCoMemberOfBond]
+order = 23
+id = "BondGeneratedCoMemberOfBond"
+cite_id = "IND.THM.BOND_GENERATED_CO_MEMBER_OF_BOND"
+name = "Bond generated co-member of bond"
+lean_symbol = "SE.Individuation.Structural.Setting.BondGenerated.coMember_of_bond"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Connectivity"
+description = "In a bond-generated setting, bonded atoms are co-members."
+
+[theorem.BondGeneratedLeOfEquivalence]
+order = 24
+id = "BondGeneratedLeOfEquivalence"
+cite_id = "IND.THM.BOND_GENERATED_LE_OF_EQUIVALENCE"
+name = "Bond generated least equivalence"
+lean_symbol = "SE.Individuation.Structural.Setting.BondGenerated.le_of_equivalence"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Connectivity"
+description = "In a bond-generated setting, co-membership is the least equivalence relation containing the bonds."
+
+[theorem.WholeConditionsSingletonOfIsolated]
+order = 25
+id = "WholeConditionsSingletonOfIsolated"
+cite_id = "IND.THM.WHOLE_CONDITIONS_SINGLETON_OF_ISOLATED"
+name = "Whole conditions singleton of isolated"
+lean_symbol = "SE.Individuation.Structural.Setting.wholeConditions_singleton_of_isolated"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Connectivity"
+description = "If the class of an eligible atom is only that atom, the singleton meets the whole conditions. Whether a singleton is a whole of the intended kind is decided by independently warranted judgments for that kind."
+
+[theorem.BondGeneratedWholeConditionsSingletonOfNoBond]
+order = 26
+id = "BondGeneratedWholeConditionsSingletonOfNoBond"
+cite_id = "IND.THM.BOND_GENERATED_WHOLE_CONDITIONS_SINGLETON_OF_NO_BOND"
+name = "Bond generated singleton of no bond"
+lean_symbol = "SE.Individuation.Structural.Setting.BondGenerated.wholeConditions_singleton_of_no_bond"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Connectivity"
+description = "In a bond-generated setting, an eligible atom with no bond forms a singleton that meets the whole conditions."
+
+[theorem.EligibleIsoMemImageIff]
+order = 27
+id = "EligibleIsoMemImageIff"
+cite_id = "IND.THM.ELIGIBLE_ISO_MEM_IMAGE_IFF"
+name = "Eligible isomorphism membership in image"
+lean_symbol = "SE.Individuation.Structural.EligibleIso.mem_image_iff"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Transport"
+description = "The image of an eligible atom lies in the image of a set exactly when the atom lies in the set."
+
+[theorem.EligibleIsoCoMemberIff]
+order = 28
+id = "EligibleIsoCoMemberIff"
+cite_id = "IND.THM.ELIGIBLE_ISO_CO_MEMBER_IFF"
+name = "Eligible isomorphism co-member iff"
+lean_symbol = "SE.Individuation.Structural.EligibleIso.coMember_iff"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Transport"
+description = "Co-membership of eligible atoms is preserved and reflected by an eligible isomorphism."
+
+[theorem.EligibleIsoWholeConditionsImageIff]
+order = 29
+id = "EligibleIsoWholeConditionsImageIff"
+cite_id = "IND.THM.ELIGIBLE_ISO_WHOLE_CONDITIONS_IMAGE_IFF"
+name = "Eligible isomorphism whole conditions image"
+lean_symbol = "SE.Individuation.Structural.EligibleIso.wholeConditions_image_iff"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Transport"
+description = "The whole conditions are invariant under transport of sets inside the eligible domain."
+
+[theorem.EligibleIsoImageEqIff]
+order = 30
+id = "EligibleIsoImageEqIff"
+cite_id = "IND.THM.ELIGIBLE_ISO_IMAGE_EQ_IFF"
+name = "Eligible isomorphism image equality"
+lean_symbol = "SE.Individuation.Structural.EligibleIso.image_eq_iff"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Transport"
+description = "Transport preserves and reflects equality of sets inside the eligible domain."
+
+[theorem.EligibleIsoImageDisjointIff]
+order = 31
+id = "EligibleIsoImageDisjointIff"
+cite_id = "IND.THM.ELIGIBLE_ISO_IMAGE_DISJOINT_IFF"
+name = "Eligible isomorphism image disjointness"
+lean_symbol = "SE.Individuation.Structural.EligibleIso.image_disjoint_iff"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Transport"
+description = "Transport preserves and reflects disjointness of sets, given that the first lies in the eligible domain."
+
+[theorem.PresentationTransportSucceedsIff]
+order = 32
+id = "PresentationTransportSucceedsIff"
+cite_id = "IND.THM.PRESENTATION_TRANSPORT_SUCCEEDS_IFF"
+name = "Presentation transport succeeds iff"
+lean_symbol = "SE.Individuation.Structural.PresentationTransport.succeeds_iff"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Transport"
+description = "Success is invariant under presentation transport."
+
+[theorem.PresentationTransportSameUnitIff]
+order = 33
+id = "PresentationTransportSameUnitIff"
+cite_id = "IND.THM.PRESENTATION_TRANSPORT_SAME_UNIT_IFF"
+name = "Presentation transport same unit iff"
+lean_symbol = "SE.Individuation.Structural.PresentationTransport.sameUnit_iff"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Transport"
+description = "Same-unit judgments are invariant under presentation transport. This is invariance under the stated transport, not strict identity across settings."
+
+[theorem.PresentationTransportDistinctUnitsIff]
+order = 34
+id = "PresentationTransportDistinctUnitsIff"
+cite_id = "IND.THM.PRESENTATION_TRANSPORT_DISTINCT_UNITS_IFF"
+name = "Presentation transport distinct units iff"
+lean_symbol = "SE.Individuation.Structural.PresentationTransport.distinctUnits_iff"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Transport"
+description = "Distinct-unit judgments are invariant under presentation transport."
+
+[theorem.AccountAdmissiblePresentationIff]
+order = 35
+id = "AccountAdmissiblePresentationIff"
+cite_id = "IND.THM.ACCOUNT_ADMISSIBLE_PRESENTATION_IFF"
+name = "Account admissible presentation iff"
+lean_symbol = "SE.Individuation.Structural.individuationAccount.admissiblePresentation_iff"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Account"
+description = "Adapter equation: the account's admissible-presentation predicate is the setting's admissibility predicate."
+
+[theorem.AccountOneIff]
+order = 36
+id = "AccountOneIff"
+cite_id = "IND.THM.ACCOUNT_ONE_IFF"
+name = "Account success iff"
+lean_symbol = "SE.Individuation.Structural.individuationAccount.one_iff"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Account"
+description = "Adapter equation: the account's success predicate is Succeeds."
+
+[theorem.AccountSameUnitIff]
+order = 37
+id = "AccountSameUnitIff"
+cite_id = "IND.THM.ACCOUNT_SAME_UNIT_IFF"
+name = "Account same unit iff"
+lean_symbol = "SE.Individuation.Structural.individuationAccount.sameUnit_iff"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Account"
+description = "Adapter equation: the account's same-unit relation is SameUnit."
+
+[theorem.AccountPresentsIff]
+order = 38
+id = "AccountPresentsIff"
+cite_id = "IND.THM.ACCOUNT_PRESENTS_IFF"
+name = "Account presents iff"
+lean_symbol = "SE.Individuation.Structural.individuationAccount.presents_iff"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Account"
+description = "Adapter equation: the account presents a set-valued referent exactly when the presentation succeeds and its support equals the referent."
+
+[theorem.AccountOneAdmissible]
+order = 39
+id = "AccountOneAdmissible"
+cite_id = "IND.THM.ACCOUNT_ONE_ADMISSIBLE"
+name = "Account success admissible"
+lean_symbol = "SE.Individuation.Structural.individuationAccount.one_admissible"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Account"
+description = "Success guard: a successful presentation is admissible."
+
+[theorem.AccountPresentsOne]
+order = 40
+id = "AccountPresentsOne"
+cite_id = "IND.THM.ACCOUNT_PRESENTS_ONE"
+name = "Account presents success"
+lean_symbol = "SE.Individuation.Structural.individuationAccount.presents_one"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Account"
+description = "Success guard: presenting a referent requires success."
+
+[theorem.AccountSameUnitOneLeft]
+order = 41
+id = "AccountSameUnitOneLeft"
+cite_id = "IND.THM.ACCOUNT_SAME_UNIT_ONE_LEFT"
+name = "Account same unit success left"
+lean_symbol = "SE.Individuation.Structural.individuationAccount.sameUnit_one_left"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Account"
+description = "Success guard: same unit requires success of the left presentation."
+
+[theorem.AccountSameUnitOneRight]
+order = 42
+id = "AccountSameUnitOneRight"
+cite_id = "IND.THM.ACCOUNT_SAME_UNIT_ONE_RIGHT"
+name = "Account same unit success right"
+lean_symbol = "SE.Individuation.Structural.individuationAccount.sameUnit_one_right"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Account"
+description = "Success guard: same unit requires success of the right presentation."
+
+[theorem.AccountOneIffPresentsSupport]
+order = 43
+id = "AccountOneIffPresentsSupport"
+cite_id = "IND.THM.ACCOUNT_ONE_IFF_PRESENTS_SUPPORT"
+name = "Account success iff presents support"
+lean_symbol = "SE.Individuation.Structural.individuationAccount.one_iff_presents_support"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Account"
+description = "A successful presentation presents exactly its support."
+
+[theorem.AccountPresentsUnique]
+order = 44
+id = "AccountPresentsUnique"
+cite_id = "IND.THM.ACCOUNT_PRESENTS_UNIQUE"
+name = "Account presents unique"
+lean_symbol = "SE.Individuation.Structural.individuationAccount.presents_unique"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Account"
+description = "A presentation presents at most one set-valued referent."
+
+[theorem.AccountSameUnitIffCommonPresents]
+order = 45
+id = "AccountSameUnitIffCommonPresents"
+cite_id = "IND.THM.ACCOUNT_SAME_UNIT_IFF_COMMON_PRESENTS"
+name = "Account same unit iff common presents"
+lean_symbol = "SE.Individuation.Structural.individuationAccount.sameUnit_iff_common_presents"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Account"
+description = "Same unit is exactly: both presentations present a common set-valued referent."
+
+[theorem.AccountSameUnitSelfIff]
+order = 46
+id = "AccountSameUnitSelfIff"
+cite_id = "IND.THM.ACCOUNT_SAME_UNIT_SELF_IFF"
+name = "Account same unit self iff"
+lean_symbol = "SE.Individuation.Structural.individuationAccount.sameUnit_self_iff"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Account"
+description = "The account's same-unit relation at a presentation with itself is exactly its success."
+
+[theorem.SupportEqualityEquivalence]
+order = 47
+id = "SupportEqualityEquivalence"
+cite_id = "IND.THM.SUPPORT_EQUALITY_EQUIVALENCE"
+name = "Support equality equivalence"
+lean_symbol = "SE.Individuation.Structural.Setting.supportEquality_equivalence"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Commitments"
+description = "Support equality is an equivalence relation on successful presentations."
+
+[theorem.SupportEqualityAdmissible]
+order = 48
+id = "SupportEqualityAdmissible"
+cite_id = "IND.THM.SUPPORT_EQUALITY_ADMISSIBLE"
+name = "Support equality admissible"
+lean_symbol = "SE.Individuation.Structural.Setting.supportEquality_admissible"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Commitments"
+description = "Support equality is admissible, in the sense of the Persistence commitment calculus, for the same-unit and distinct-unit commitments. This is soundness of the construction, not validation of the criterion against practice."
+
+[theorem.CommitmentsConsistent]
+order = 49
+id = "CommitmentsConsistent"
+cite_id = "IND.THM.COMMITMENTS_CONSISTENT"
+name = "Commitments consistent"
+lean_symbol = "SE.Individuation.Structural.Setting.commitments_consistent"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Commitments"
+description = "The same-unit and distinct-unit commitments are consistent. One criterion determines both, so consistency does not independently validate the criterion."
+
+[theorem.SupportEqualityUnique]
+order = 50
+id = "SupportEqualityUnique"
+cite_id = "IND.THM.SUPPORT_EQUALITY_UNIQUE"
+name = "Support equality unique"
+lean_symbol = "SE.Individuation.Structural.Setting.supportEquality_unique"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Commitments"
+description = "Support equality is the only admissible relation for these commitments. It uses the same-or-distinct dichotomy."
+
+[theorem.NoUndetermined]
+order = 51
+id = "NoUndetermined"
+cite_id = "IND.THM.NO_UNDETERMINED"
+name = "No undetermined pairs"
+lean_symbol = "SE.Individuation.Structural.Setting.no_undetermined"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Commitments"
+description = "No pair of successful presentations is undetermined under these exact commitments."
+
+[theorem.DistinctPairsIffSeparated]
+order = 52
+id = "DistinctPairsIffSeparated"
+cite_id = "IND.THM.DISTINCT_PAIRS_IFF_SEPARATED"
+name = "Distinct pairs iff separated"
+lean_symbol = "SE.Individuation.Structural.Setting.distinctPairs_iff_separated"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.Commitments"
+description = "The distinct-unit commitments coincide with the pairs separated by the support observation map. This depends on exclusivity through the dichotomy."
+
+[theorem.BondClosureIffGenerated]
+order = 53
+id = "BondClosureIffGenerated"
+cite_id = "IND.THM.BOND_CLOSURE_IFF_GENERATED"
+name = "Bond closure iff generated"
+lean_symbol = "SE.Individuation.Structural.bondClosure_iff_generated"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.BoundaryCompatibility"
+description = "The bond-generated relation is the generated relation of the Persistence commitment calculus, at universe 0."
+
+[theorem.BondClosureIffReachSymmStep]
+order = 54
+id = "BondClosureIffReachSymmStep"
+cite_id = "IND.THM.BOND_CLOSURE_IFF_REACH_SYMM_STEP"
+name = "Bond closure iff finite chain"
+lean_symbol = "SE.Individuation.Structural.bondClosure_iff_reach_symmStep"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.BoundaryCompatibility"
+description = "Finite-path characterization: atoms are co-members exactly when a finite chain of bonds, each used in either direction, connects them. The chain explains the co-membership."
+
+[theorem.ConsistentIffNoSeparatedConnected]
+order = 55
+id = "ConsistentIffNoSeparatedConnected"
+cite_id = "IND.THM.CONSISTENT_IFF_NO_SEPARATED_CONNECTED"
+name = "Consistent iff no separated pair connected"
+lean_symbol = "SE.Individuation.Structural.consistent_iff_no_separated_connected"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.BoundaryCompatibility"
+description = "Boundary compatibility: bonds and separation commitments are consistent exactly when no pair asserted to be in different wholes lies in the generated co-membership."
+
+[theorem.ForbiddenIffExtendConnects]
+order = 56
+id = "ForbiddenIffExtendConnects"
+cite_id = "IND.THM.FORBIDDEN_IFF_EXTEND_CONNECTS"
+name = "Forbidden iff extension connects"
+lean_symbol = "SE.Individuation.Structural.forbidden_iff_extend_connects"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.BoundaryCompatibility"
+description = "A proposed bond is forbidden exactly when adding it would connect a pair asserted to be in different wholes."
+
+[theorem.ExistsBondDifference]
+order = 57
+id = "ExistsBondDifference"
+cite_id = "IND.THM.EXISTS_BOND_DIFFERENCE"
+name = "Exists bond difference"
+lean_symbol = "SE.Individuation.Structural.exists_bond_difference"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.BoundaryCompatibility"
+description = "Generator comparison: if two bond sets generate different co-membership relations, a bond on one side has endpoints not connected on the other. The witness localizes a difference; it does not identify a scientifically erroneous bond."
+
+[theorem.BondGeneratedAdmissibleOfConsistent]
+order = 58
+id = "BondGeneratedAdmissibleOfConsistent"
+cite_id = "IND.THM.BOND_GENERATED_ADMISSIBLE_OF_CONSISTENT"
+name = "Bond generated admissible of consistent"
+lean_symbol = "SE.Individuation.Structural.Setting.BondGenerated.admissible_of_consistent"
+lean_kind = "theorem"
+source_module = "SE.Individuation.Structural.BoundaryCompatibility"
+description = "Consistent bonds and separation commitments make the co-membership of a bond-generated setting admissible in the sense of the Persistence commitment calculus."

@@ -1,0 +1,72 @@
+# ============================================================
+# reference/theory-reference.toml
+# ============================================================
+# Theory reference configuration.
+#
+# The theory repository owns Lean source, reference TOML, and
+# generated JSON artifacts. The reusable reference kit owns the
+# generic validation, export, catalog, scaffold, and inspection
+# machinery.
+
+schema = "se-theory-reference"
+schema_version = "0.1.0"
+
+# === Repository Identity ===
+
+[repository]
+organization = "structural-explainability"
+name = "se-theory-individuation"
+theory = "individuation"
+description = "Individuation theory repository for Structural Explainability."
+
+# === Lean Public Surface ===
+
+[lean]
+root_module = "SE"
+
+public_modules = [
+    "SE",
+    "SE.Individuation",
+    # Get the following with:
+    # Get-ChildItem .\SE\Individuation -Recurse -Filter *.lean |
+    # ForEach-Object { $_.FullName.Substring((Get-Location).Path.Length + 1) } |
+    # Sort-Object
+    "SE.Individuation.Structural.Account",
+    "SE.Individuation.Structural.BoundaryCompatibility",
+    "SE.Individuation.Structural.Commitments",
+    "SE.Individuation.Structural.Connectivity",
+    "SE.Individuation.Structural.SameUnit",
+    "SE.Individuation.Structural.Setting",
+    "SE.Individuation.Structural.Transport",
+    "SE.Individuation.Structural.Whole",
+
+]
+
+test_modules = ["SETest"]
+
+# === Reference Artifacts ===
+
+[reference]
+root = "reference"
+
+# === Exported Machine Artifacts ===
+
+[export]
+root = "data/individuation"
+
+# === Reference-Kind Mapping ===
+#
+# Generic Lean-surface kinds register public theory concepts.
+# Individuation has no finite domain catalog of its own, so there are
+# no domain catalog kinds; only the generated catalog is exported.
+
+[surface_kinds]
+type = "reference/individuation-types.toml"
+vocabulary = "reference/individuation-vocabulary.toml"
+predicate = "reference/individuation-predicates.toml"
+theorem = "reference/individuation-theorems.toml"
+
+# === Export Mapping ===
+
+[export_map]
+catalog = "data/individuation/individuation-catalog.json"

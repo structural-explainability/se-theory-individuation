@@ -1,0 +1,114 @@
+# ============================================================
+# lakefile.toml
+# ============================================================
+# Declares the public Lean package identity, import surface,
+# build targets, dependencies, and verification executables.
+
+# Run with:
+# lake build
+# lake test
+# lake lint
+
+# ============================================================
+# === PROJECT IDENTITY ===
+# ============================================================
+
+name = "se-theory-individuation"
+version = "0.1.0"
+license = "MIT"
+
+
+# ============================================================
+# === BUILD SURFACE ===
+# ============================================================
+# defaultTargets must include the public Lean library root.
+
+defaultTargets = ["SE.Individuation"]
+testDriver = "SETest"
+lintDriver = "SELint"
+
+# ============================================================
+# === DEPENDENCIES ===
+# ============================================================
+
+[[require]]
+# Mathlib provides standard infrastructure used by this library.
+# Mathlib release must match the Lean version in lean-toolchain.
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.34.0"
+
+[[require]]
+name = "se-theory-neutral-substrate"
+git = "https://github.com/structural-explainability/se-theory-neutral-substrate"
+rev = "v0.11.0"
+
+[[require]]
+name = "se-theory-persistence"
+git = "https://github.com/structural-explainability/se-theory-persistence"
+rev = "v0.5.0"
+
+# ============================================================
+# === LEAN OPTIONS ===
+# ============================================================
+
+[leanOptions]
+weak.linter.mathlibStandardSet = true
+weak.linter.flexible = true
+weak.linter.style.header = false
+weak.linter.style.longLine = false
+
+# These linters are included in Mathlib's standard set but do
+# not currently operate correctly in downstream projects.
+weak.linter.pythonStyle = false
+weak.linter.checkInitImports = false
+weak.linter.allScriptsDocumented = false
+
+# This linter is not extensible for Unicode outside Mathlib's set.
+weak.linter.unicodeLinter = false
+
+# ============================================================
+# === PUBLIC LIBRARY ===
+# ============================================================
+# The library downstream packages import. It must claim only the module
+# family owned by this package. Other packages own other SE.* families.
+#
+# Do not claim the shared top-level module "SE". Multiple theory packages
+# coexist in the same dependency graph, so each library must own only its
+# namespaced family (for example SE.Individuation or SE.Transformation).
+#
+# Glob forms:
+#   "A.B"    only module A.B
+#   "A.B.*"  A.B and all its submodules
+#   "A.B.+"  all submodules of A.B, but not A.B itself
+#
+# Use ".*" when the family has a root module such as SE/Individuation.lean.
+# Use ".+" for a submodule directory that has no corresponding root .lean
+# file when that family is listed separately.
+
+[[lean_lib]]
+name = "SE.Individuation"
+roots = ["SE.Individuation"]
+globs = ["SE.Individuation.*"]
+
+
+# ============================================================
+# === TEST LIBRARY ===
+# ============================================================
+# Internal verification; not part of downstream public import surface.
+
+[[lean_lib]]
+name = "SETest"
+roots = ["SETest.Individuation"]
+globs = ["SETest", "SETest.Individuation.*"]
+leanOptions = { weak.linter.style.header = false }
+
+
+# ============================================================
+# === LINT DRIVER ===
+# ============================================================
+
+[[lean_exe]]
+name = "SELint"
+root = "SELint"
+leanOptions = { Elab.inServer = true }
