@@ -136,7 +136,7 @@ jobs:
           cat > docbuild/lakefile.toml <<EOF
           name = "docbuild"
           reservoir = false
-          version = "0.1.0"
+          version = "0.1.1"
           packagesDir = "../.lake/packages"
 
           [[require]]

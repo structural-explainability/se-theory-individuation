@@ -12,7 +12,7 @@ message: "If you use this work, please cite it using the metadata in CITATION.cf
 type: software
 
 title: "SE Theory: Individuation"
-version: "0.1.0"
+version: "0.1.1"
 date-released: "2026-10-18"
 
 authors:

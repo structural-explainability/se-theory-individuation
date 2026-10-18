@@ -13,7 +13,15 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ---
 
-## [0.1.0] - 2026-10-03
+## [0.1.1] - 2026-10-18
+
+### Updated
+
+- Documentation: filled the Individuation overview, dependency, coverage, and scope sections in the docs index and README.
+
+---
+
+## [0.1.0] - 2026-10-18
 
 ### Added
 
@@ -131,7 +139,7 @@ git push origin vX.Y.Z
 Create GitHub Release after pushing tag, for example with a command like this:
 
 ```shell
-gh release create v0.1.0 --verify-tag --title "0.1.0"  --generate-notes
+gh release create v0.1.1 --verify-tag --title "0.1.1"  --generate-notes
 ```
 
 ## Only As Needed (delete a tag)
@@ -143,5 +151,6 @@ git push origin :refs/tags/vX.Z.Y
 
 ## Links
 
-[Unreleased]: https://github.com/structural-explainability/se-theory-individuation/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/structural-explainability/se-theory-individuation/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/structural-explainability/se-theory-individuation/releases/tag/v0.1.1
 [0.1.0]: https://github.com/structural-explainability/se-theory-individuation/releases/tag/v0.1.0
