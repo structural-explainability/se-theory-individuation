@@ -13,10 +13,12 @@
 > Lean 4 formalization of foundational individuation theory
 > for Structural Explainability (SE).
 
-Individuation covers _.
+Individuation asks under what formal conditions a presentation picks out
+exactly one whole, given a stated criterion of whole co-membership.
 
 This repository defines the formal vocabulary and relations needed to reason
-about _.
+about structural settings, successful presentations, and
+same-unit and distinct-unit judgments.
 
 For the full documentation, see [`docs/en/index.md`](./docs/en/index.md).
 
@@ -26,7 +28,7 @@ Lean source files are authoritative for formal definitions, predicates, axioms,
 theorems, proof obligations, and reference rules.
 
 Reference artifacts under `reference/` and generated artifacts under
-`data/individuation/` mirror the Lean public surface.
+`data/` mirror the Lean public surface.
 They do not define theory semantics independently of Lean.
 
 ## Import
