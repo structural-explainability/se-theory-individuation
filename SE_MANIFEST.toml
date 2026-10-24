@@ -22,7 +22,7 @@ class = "theory"
 kind = "foundation"
 status = "active"
 since = "2026"
-summary = "Lean 4 formalization of foundational individuation theory for identity survival, invariance, equivalence, and breakage under transformation."
+summary = "Lean 4 formalization of structural whole individuation, successful presentations, same-unit and distinct-unit judgments, connectivity, transport, and commitment compatibility."
 
 # === Layer Position ===
 
@@ -50,7 +50,6 @@ artifacts = [
   "individuation-relation-definitions",
   "individuation-invariant-definitions",
   "individuation-equivalence-definitions",
-  "individuation-breakage-definitions",
 ]
 
 # === Scope ===
@@ -58,11 +57,13 @@ artifacts = [
 [scope]
 includes = [
   "foundational individuation vocabulary",
-  "identity survival relations",
-  "identity breakage relations",
-  "individuation invariants",
-  "individuation equivalence",
-  "Lean formalization of individuation theory",
+  "structural settings and whole conditions",
+  "successful whole presentations",
+  "same-unit and distinct-unit judgments",
+  "bond-generated whole co-membership",
+  "structural transport across settings",
+  "Neutral Substrate individuation account adapter",
+  "compatibility with the Persistence commitment calculus",
 ]
 
 excludes = [

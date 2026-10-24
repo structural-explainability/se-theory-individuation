@@ -47,6 +47,18 @@ which wholes are of the intended kind,
 depend on independently justified criteria
 supplied outside this repository.
 
+Agreement on observed properties or structural descriptors does not
+establish identity of the intended referents.
+Distinct referents may agree on every recorded descriptor.
+Support equality establishes same-unit only within this construction,
+whose support interpretation and whole co-membership criterion
+require independent scientific justification for the intended kind.
+
+Likewise, failure to establish sameness from available evidence
+does not establish distinctness.
+This limitation does not alter the formal same-or-distinct result
+for successful presentations within the exclusive-whole construction.
+
 ## Dependencies
 
 This repository is a theory-layer repository

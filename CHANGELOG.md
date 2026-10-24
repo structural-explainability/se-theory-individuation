@@ -11,13 +11,18 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ## [Unreleased]
 
+- updated description of limits
+- updated manifest file
+- updated status of CHEM-01 research contract
+
 ---
 
 ## [0.1.1] - 2026-10-18
 
 ### Updated
 
-- Documentation: filled the Individuation overview, dependency, coverage, and scope sections in the docs index and README.
+- Documentation: filled the Individuation overview, dependency,
+  coverage, and scope sections in the docs index and README.
 
 ---
 
@@ -76,6 +81,7 @@ uvx gha-tools autoupdate --pin=all --write .github/workflows
 # NO .github\workflows\deploy-zensical.yml
 # YES  .github\workflows\deploy-zensical-lean.yml
 uvx zizmor@latest .github/
+# some suppressed is still okay
 
 # Validate.
 uvx cffconvert --validate

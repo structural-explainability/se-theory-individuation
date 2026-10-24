@@ -1,7 +1,7 @@
 # Individuation 0.1.0: Candidate Semantic Contract (revision 2)
 
-Status: conditional construction draft; scientific adequacy OPEN;
-conditional formalization not approved; no Lean compilation claimed.
+Status: conditional structural construction implemented in Lean;
+scientific adequacy OPEN; CHEM-01 grounding incomplete.
 
 ## Objectives
 
@@ -701,18 +701,17 @@ Ownership does not constitute discharge.
 
 ## Stage
 
-- Protocol stage: theory construction; step 6 (adversarial tests) pending.
-- Verdict under theory-construction: FUNDAMENTAL QUESTION REMAINS (adequacy).
-- Verdict under theory-acceptance: OPEN.
-- Conditional formalization ahead of acceptance: not approved.
-  [TODO: record approval (name, date, scope limited to mathematical
-  correctness of the construction) to change this.]
-  Any approved formalization is not canonical and is not evidence of scientific acceptance.
+- Mathematical construction: implemented in Lean.
+- Theory-construction status: scientific adequacy remains unresolved.
+- Theory-acceptance status: OPEN.
+- CHEM-01: grounding and independent adequacy assessment incomplete.
+- Formal correctness does not establish that the supplied whole
+  co-membership or support semantics are adequate for intended referents.
 
 ## Development and Acceptance Status
 
-Proceed with review of this contract and the CHEM-01 pre-registration.
-Conditional formalization waits for the approval recorded under Stage.
+Complete the CHEM-01 grounding case using independently warranted
+judgments and the documented comparison procedure.
 
 Scientific adequacy remains **OPEN**.
 
