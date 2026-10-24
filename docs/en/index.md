@@ -76,90 +76,16 @@ effect dimensions, or state models.
 The connection to Persistence is stated for carriers in `Type`,
 so those modules specialize atoms and presentations to universe 0.
 
-## Covers
+## Scope
 
-This repository covers:
+Repository scope is defined in `SE_MANIFEST.toml`.
 
-- structural settings, whole conditions, and success
-- same-unit and distinct-unit judgments
-- the connectivity instance and its bond closure
-- transport of whole structure between settings
-- the Neutral Substrate individuation account
-- the connection to Persistence's commitment calculus
-- Lean-side reference vocabulary
-- machine-readable public-surface registries
-- public Lean import surface
+## Exclusions
 
-## Owns
-
-This repository owns:
-
-- the public import surface `SE/Individuation.lean`
-- the repository-level aggregator `SE.lean`
-- reference artifacts under `reference/`
-- generated individuation artifacts under `data/individuation/`
-
-## Out of Scope
-
-This repository does not own:
-
-- neutral substrate primitives
-- transformation operator, family, or kind definitions
-- transformation taxonomy lifts
-- transformation effect dimensions or state models
-- dimension-specific observational bridges
-- identity regime definitions or profiles
-- the abstract individuation account (Neutral Substrate)
-- the commitment calculus (equivalence generation,
-  consistency, admissibility, and status)
-- domain-specific identity criteria or their scientific justification
-- validation and export tooling for artifacts
-- domain mappings
-- runtime systems
-- operational policy
-
-## Design Constraints
-
-Lean source files are authoritative for formal theory semantics and proofs.
-
-Reference registries describe the registered public surface
-and must correspond to that Lean surface.
-
-Python and generated data may mirror, validate, export,
-or document the Lean surface.
-They must not define theory semantics independently of Lean.
-
-See the Lean source files and reference registries for current values.
-
-## Documentation Constraints
-
-Documentation is descriptive only.
-It may provide orientation, summaries, and navigation.
-
-It must not introduce formal semantics absent from Lean.
-
-Machine-readable artifacts mirror the Lean surface
-and reference registries under `data/individuation/`.
+Repository exclusions are defined in `SE_MANIFEST.toml`.
 
 ## Import
 
 Downstream Lean projects should import the public surface:
 
 `import SE.Individuation`
-
-## Tooling
-
-Python and other tooling may be used for:
-
-- documentation generation
-- formatting and linting
-- repository automation
-- reference artifact validation
-- generated contract export checks
-
-They must not:
-
-- define correctness
-- validate theory semantics independently of Lean
-- replace Lean definitions or proofs
-- introduce downstream theory dependencies
