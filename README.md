@@ -31,6 +31,13 @@ Reference artifacts under `reference/` and generated artifacts under
 `data/` mirror the Lean public surface.
 They do not define theory semantics independently of Lean.
 
+The CI-Lean workflow builds the declared public Lean surface with
+`lake build --wfail`,
+failing on reported warnings, including `sorry`.
+Successful compilation verifies formal declarations against their
+stated assumptions; it does not establish the scientific adequacy
+of those assumptions or interpretations.
+
 ## Import
 
 Downstream Lean projects should import the public surface:
@@ -53,7 +60,7 @@ Maintain:
 - `lean-toolchain`
 - `reference/theory-reference.toml` - hand-maintained configuration
 - `reference/*.toml` - reference source artifacts
-- Lean source + RR comments - hand-maintained theory source
+- Lean source and reference-rule (RR) traceability comments - hand-maintained theory source
 
 ### Clone and Open Project in VS Code
 
