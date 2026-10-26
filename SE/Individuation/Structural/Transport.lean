@@ -1,3 +1,8 @@
+/-
+Copyright (c) 2026 Denise M. Case. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Denise M. Case
+-/
 module
 
 public import SE.Individuation.Structural.Connectivity
@@ -49,11 +54,11 @@ namespace EligibleIso
 variable {s₁ : Setting A₁ P₁} {s₂ : Setting A₂ P₂}
 
 /-- The image of a set of atoms: images of its eligible atoms. -/
-def image (f : EligibleIso s₁ s₂) (W : Set A₁) : Set A₂ :=
+def image (f : EligibleIso s₁ s₂) (W : MathlibMini.Set A₁) : MathlibMini.Set A₂ :=
   fun b => ∃ x : {a : A₁ // a ∈ s₁.eligible}, x.1 ∈ W ∧ (f.toFun x).1 = b
 
 /-- An element lies in the image exactly when it comes from an eligible element. -/
-theorem mem_image_iff (f : EligibleIso s₁ s₂) (x : {a : A₁ // a ∈ s₁.eligible}) (W : Set A₁) :
+theorem mem_image_iff (f : EligibleIso s₁ s₂) (x : {a : A₁ // a ∈ s₁.eligible}) (W : MathlibMini.Set A₁) :
     (f.toFun x).1 ∈ f.image W ↔ x.1 ∈ W := by
   constructor
   · rintro ⟨x', hx', heq⟩
@@ -80,7 +85,7 @@ theorem coMember_iff (f : EligibleIso s₁ s₂) (a b : A₁)
         (h.to_E (f.toFun ⟨a, ha⟩).2 (f.toFun ⟨b, hb⟩).2))
 
 /-- The whole conditions are invariant under structural transport of sets inside the eligible domain. -/
-theorem wholeConditions_image_iff (f : EligibleIso s₁ s₂) {W : Set A₁}
+theorem wholeConditions_image_iff (f : EligibleIso s₁ s₂) {W : MathlibMini.Set A₁}
     (hW : W ⊆ s₁.eligible) :
     s₁.WholeConditions W ↔ s₂.WholeConditions (f.image W) := by
   constructor
@@ -117,12 +122,12 @@ theorem wholeConditions_image_iff (f : EligibleIso s₁ s₂) {W : Set A₁}
       exact (f.mem_image_iff ⟨c, hce⟩ W).1 hcm
 
 /-- Transport preserves and reflects equality of sets inside the eligible domain. -/
-theorem image_eq_iff (f : EligibleIso s₁ s₂) {W₁ W₂ : Set A₁}
+theorem image_eq_iff (f : EligibleIso s₁ s₂) {W₁ W₂ : MathlibMini.Set A₁}
     (h₁ : W₁ ⊆ s₁.eligible) (h₂ : W₂ ⊆ s₁.eligible) :
     f.image W₁ = f.image W₂ ↔ W₁ = W₂ := by
   constructor
   · intro h
-    apply Set.ext
+    apply MathlibMini.Set.ext
     intro a
     constructor
     · intro ha
@@ -137,7 +142,7 @@ theorem image_eq_iff (f : EligibleIso s₁ s₂) {W₁ W₂ : Set A₁}
     rw [h]
 
 /-- Transport preserves and reflects disjointness of sets, given the first lies in the eligible domain. -/
-theorem image_disjoint_iff (f : EligibleIso s₁ s₂) {W₁ W₂ : Set A₁}
+theorem image_disjoint_iff (f : EligibleIso s₁ s₂) {W₁ W₂ : MathlibMini.Set A₁}
     (h₁ : W₁ ⊆ s₁.eligible) :
     (∀ b, b ∈ f.image W₁ → b ∉ f.image W₂) ↔ (∀ a, a ∈ W₁ → a ∉ W₂) := by
   constructor

@@ -1,3 +1,8 @@
+/-
+Copyright (c) 2026 Denise M. Case. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Denise M. Case
+-/
 module
 
 public import SE.Individuation.Structural.Setting
@@ -31,7 +36,7 @@ namespace Setting
 variable {A Presentation : Type u}
 
 /-- The three whole conditions on a set of atoms. -/
-def WholeConditions (s : Setting A Presentation) (W : Set A) : Prop :=
+def WholeConditions (s : Setting A Presentation) (W : MathlibMini.Set A) : Prop :=
   (∃ a, a ∈ W ∧ a ∈ s.eligible) ∧
   (∀ a b, a ∈ W → b ∈ W → s.CoMember a b) ∧
   (∀ a b, a ∈ W → b ∈ s.eligible → s.CoMember a b → b ∈ W)
@@ -41,11 +46,11 @@ def Succeeds (s : Setting A Presentation) (p : Presentation) : Prop :=
   s.admissible p ∧ s.WholeConditions (s.support p)
 
 /-- `W` is the `E`-class of some eligible atom. -/
-def IsClass (s : Setting A Presentation) (W : Set A) : Prop :=
+def IsClass (s : Setting A Presentation) (W : MathlibMini.Set A) : Prop :=
   ∃ a, a ∈ s.eligible ∧ ∀ b, b ∈ W ↔ s.CoMember a b
 
 /-- The whole conditions characterize exactly one eligible `E`-class. -/
-theorem wholeConditions_iff_isClass (s : Setting A Presentation) (W : Set A) :
+theorem wholeConditions_iff_isClass (s : Setting A Presentation) (W : MathlibMini.Set A) :
     s.WholeConditions W ↔ s.IsClass W := by
   constructor
   · rintro ⟨⟨a, haW, hae⟩, hint, hsat⟩
@@ -59,7 +64,7 @@ theorem wholeConditions_iff_isClass (s : Setting A Presentation) (W : Set A) :
       exact (hW c).2 (((hW b).1 hb).trans hbc)
 
 /-- Every set meeting the whole conditions lies inside the eligible domain. -/
-theorem WholeConditions.subset_eligible {s : Setting A Presentation} {W : Set A}
+theorem WholeConditions.subset_eligible {s : Setting A Presentation} {W : MathlibMini.Set A}
     (h : s.WholeConditions W) : W ⊆ s.eligible := by
   intro a ha
   exact (h.2.1 a a ha ha).left_eligible
@@ -78,13 +83,13 @@ theorem Succeeds.admissible {s : Setting A Presentation} {p : Presentation}
     (h : s.Succeeds p) : s.admissible p := h.1
 
 /-- Two sets meeting the whole conditions are equal or share no atom. -/
-theorem WholeConditions.eq_or_disjoint {s : Setting A Presentation} {W₁ W₂ : Set A}
+theorem WholeConditions.eq_or_disjoint {s : Setting A Presentation} {W₁ W₂ : MathlibMini.Set A}
     (h₁ : s.WholeConditions W₁) (h₂ : s.WholeConditions W₂) :
     W₁ = W₂ ∨ ∀ a, a ∈ W₁ → a ∉ W₂ := by
   by_cases h : ∃ a, a ∈ W₁ ∧ a ∈ W₂
   · obtain ⟨a, ha1, ha2⟩ := h
     left
-    apply Set.ext
+    apply MathlibMini.Set.ext
     intro b
     constructor
     · intro hb
@@ -99,7 +104,7 @@ theorem WholeConditions.eq_or_disjoint {s : Setting A Presentation} {W₁ W₂ :
 
 /-- Two sets meeting the whole conditions are not both equal and disjoint.
 Nonemptiness is what excludes the overlap of the two cases. -/
-theorem WholeConditions.not_eq_and_disjoint {s : Setting A Presentation} {W₁ W₂ : Set A}
+theorem WholeConditions.not_eq_and_disjoint {s : Setting A Presentation} {W₁ W₂ : MathlibMini.Set A}
     (h₁ : s.WholeConditions W₁) :
     ¬ (W₁ = W₂ ∧ ∀ a, a ∈ W₁ → a ∉ W₂) := by
   obtain ⟨⟨a, ha, _⟩, _, _⟩ := h₁

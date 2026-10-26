@@ -1,3 +1,8 @@
+/-
+Copyright (c) 2026 Denise M. Case. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Denise M. Case
+-/
 module
 
 public import SE.Individuation.Structural.SameUnit
@@ -32,7 +37,7 @@ universe u
 
 /-- The structural individuation account over set-valued referents. -/
 def individuationAccount (A : Type u) (Presentation : Type u) :
-    SE.Substrate.IndividuationAccount.{u} (Set A) where
+    SE.Substrate.IndividuationAccount.{u} (MathlibMini.Set A) where
   Context := Setting A Presentation
   Presentation := Presentation
   presents := fun c p W => c.Succeeds p ∧ c.support p = W
@@ -43,7 +48,7 @@ def individuationAccount (A : Type u) (Presentation : Type u) :
 namespace individuationAccount
 
 variable {A Presentation : Type u} {c : Setting A Presentation}
-  {p q : Presentation} {W W' : Set A}
+  {p q : Presentation} {W W' : MathlibMini.Set A}
 
 /-! ### Adapter equations -/
 

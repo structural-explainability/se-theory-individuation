@@ -1,6 +1,11 @@
+/-
+Copyright (c) 2026 Denise M. Case. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Denise M. Case
+-/
 module
 
-public import Mathlib.Data.Set.Defs
+public import MathlibMini.Set
 
 set_option autoImplicit false
 
@@ -33,11 +38,11 @@ universe u
 /-- A structural setting: eligible atoms, admissibility, support, and whole co-membership. -/
 structure Setting (A : Type u) (Presentation : Type u) where
   /-- The eligible domain: atoms inside the selected boundary. -/
-  eligible : Set A
+  eligible : MathlibMini.Set A
   /-- Eligibility of a candidate presentation for individuation evaluation. -/
   admissible : Presentation → Prop
   /-- The atoms represented by a presentation at this setting. -/
-  support : Presentation → Set A
+  support : Presentation → MathlibMini.Set A
   /-- Admissible supports lie inside the eligible domain. -/
   support_subset_eligible : ∀ p, admissible p → support p ⊆ eligible
   /-- Whole co-membership on eligible atoms. -/

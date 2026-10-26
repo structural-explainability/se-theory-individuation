@@ -11,9 +11,17 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ## [Unreleased]
 
+---
+
+## [0.2.0] - 2026-10-26
+
+### Changed
+
 - updated description of limits
 - updated manifest file
 - updated status of CHEM-01 research contract
+- Updated license notice.
+- Added headers to Lean files.
 
 ---
 
@@ -64,7 +72,7 @@ Follow these steps exactly when creating a new release.
 
 1.1. CITATION.cff: update version and date-released
 1.2. lakefile.toml: update version
-1.3. CHANGELOG.md: add section, move unreleased entries, update links
+1.3. CHANGELOG.md: add section, move unreleased entries, update links, update release command
 1.4. pyproject.toml: update version (near top of the file)
 
 ### Task 2. Set up and Validate
@@ -89,33 +97,6 @@ uvx se-manifest-schema validate-manifest --strict
 
 # Format Markdown.
 npx markdownlint-cli2 --fix
-
-# update lean
-elan self update
-lake update
-
-# build Lean (source of truth)
-# lake clean
-lake build
-lake test
-lake lint
-
-# check docs (may not work on windows/runs via gh action)
-# cd docbuild
-# lake build SE.Individuation:docs
-# cd ..
-
-# Generate JSON artifacts and catalog from reference TOML.
-uvx se-theory-reference-kit@latest inspect
-uvx se-theory-reference-kit@latest export
-uvx se-theory-reference-kit@latest catalog
-
-# Validate the reference artifacts against the Lean public surface.
-uvx se-theory-reference-kit@latest validate --strict
-
-# Verify generated artifacts are current without rewriting them.
-uvx se-theory-reference-kit@latest export --check
-uvx se-theory-reference-kit@latest catalog --check
 
 .\rel.ps1
 .\sit.ps1
@@ -145,7 +126,7 @@ git push origin vX.Y.Z
 Create GitHub Release after pushing tag, for example with a command like this:
 
 ```shell
-gh release create v0.1.1 --verify-tag --title "0.1.1"  --generate-notes
+gh release create v0.2.0 --verify-tag --title "0.2.0"  --generate-notes
 ```
 
 ## Only As Needed (delete a tag)
@@ -157,6 +138,7 @@ git push origin :refs/tags/vX.Z.Y
 
 ## Links
 
-[Unreleased]: https://github.com/structural-explainability/se-theory-individuation/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/structural-explainability/se-theory-individuation/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/structural-explainability/se-theory-individuation/releases/tag/v0.2.0
 [0.1.1]: https://github.com/structural-explainability/se-theory-individuation/releases/tag/v0.1.1
 [0.1.0]: https://github.com/structural-explainability/se-theory-individuation/releases/tag/v0.1.0
