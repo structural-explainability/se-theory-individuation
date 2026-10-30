@@ -16,6 +16,9 @@ the connection to the Persistence commitment calculus.
 
 - [Lean API Reference](https://structural-explainability.github.io/se-theory-individuation/lean/)
 - [GitHub Repository](https://github.com/structural-explainability/se-theory-individuation)
+- [Research Doubts and Open Questions](https://github.com/structural-explainability/se-theory-individuation/blob/main/DOUBTS.md)
+- [Research Decisions](https://github.com/structural-explainability/se-theory-individuation/blob/main/DECISIONS.md)
+
 
 ## Individuation
 
