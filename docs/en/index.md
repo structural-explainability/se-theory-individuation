@@ -19,7 +19,6 @@ the connection to the Persistence commitment calculus.
 - [Research Doubts and Open Questions](https://github.com/structural-explainability/se-theory-individuation/blob/main/DOUBTS.md)
 - [Research Decisions](https://github.com/structural-explainability/se-theory-individuation/blob/main/DECISIONS.md)
 
-
 ## Individuation
 
 A structural setting fixes a granularity.
