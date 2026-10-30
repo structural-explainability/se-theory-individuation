@@ -34,8 +34,8 @@ role = "foundational-individuation-theory"
 
 [depends]
 required = [
-  { repository = "se-theory-neutral-substrate", kind = "semantic", version = "v0.11.0" },
-  { repository = "se-theory-persistence", kind = "semantic", version = "v0.5.0" },
+  { repository = "se-theory-neutral-substrate", kind = "semantic" },
+  { repository = "se-theory-persistence", kind = "semantic" },
 ]
 optional = []
 
